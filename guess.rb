@@ -1,15 +1,14 @@
 answer = rand(101).to_i
 puts "What number am I thinking of between 1-100?"
-	num = gets.chomp.to_i
+num = 0
 	while num != answer
+		num = gets.chomp.to_i
 		if num <= answer
 			puts "Close but too low. Try again."
-			num = gets.chomp.to_i
 		elsif num >= answer
 			puts "Close but too high. Try again."
-			num = gets.chomp.to_i
-		end
-	if num == answer
+	else num == answer
 		puts "How did you know? You win"
+		exit
 	end
 end
