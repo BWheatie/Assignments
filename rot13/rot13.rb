@@ -19,4 +19,5 @@ end
 input = File.new("Input.txt")
 input.each_line do |line|
 	puts line.slice(2..100)
+out = File.open("Output.txt")
 end
