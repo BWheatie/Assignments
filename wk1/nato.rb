@@ -22,12 +22,23 @@ nato = {
 	"u" => "Uniform",
 	"v" => "Victor",
 	"w" => "Whiskey",
-	"x" => "XRay",
+	"x" => "Xray",
 	"y" => "Yankee",
 	"z" => "Zulu",
 }
-puts "What is your message"
-	message = gets.chomp.downcase
-	message.each_char do |c|
-	puts nato[c]
-end
+puts "Would you like to encrypt or decrypt your message?"
+	mode = gets.chomp.downcase
+	if mode == "encrypt"
+		puts "What is your message?"
+		message = gets.chomp.downcase
+		message.each_char do |c|
+			puts nato[c]
+		end
+	else mode == "decrypt"	
+		puts "What is your message?"
+		mess = gets.chomp
+		mess.split.each do |word|
+		print nato.key(word.capitalize)
+		end
+	end
+
