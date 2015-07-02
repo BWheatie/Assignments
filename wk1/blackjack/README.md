@@ -1,0 +1,1 @@
+The purpose of this repo is to provide a blackjack player with a tool they can use to generate the best possible move in a game of Blackjack. The app will prompt the player to to input their first and second card value as well as the dealer's face up card value. With this information the most strategic move will be returned to the user. 
