@@ -6,9 +6,10 @@ require 'minitest/pride'
 require './battleship.rb'
 require_relative 'player.rb'
 require_relative 'ships.rb'
-require_relative 'board.rb'
+require_relative 'game.rb'
 require_relative 'human.rb'
 require_relative 'computer.rb'
+require_relative 'grid.rb'
 
 $mock_inputs = []
 def get_user_input
