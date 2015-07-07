@@ -1,11 +1,6 @@
 class HumanPlayer < Player
-	def initialize name
-		@name = name()
+attr_reader :name
+	def initialize(name="Dave")
+		@name = name
 	end
-
-	def name
-		
-			
-	end
-
 end
