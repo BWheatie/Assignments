@@ -2,7 +2,6 @@ class Ship
 
 	def initialize(length)
 		@length = length
-	
 		
 	end
 
@@ -13,12 +12,17 @@ class Ship
 	def place x, y, axis
 		@x = x
 		@y = y
-		@axis = axis	
+		return true
 	end
 
-	def covers? # place + length = covers
-		self.place
-			
-		
+	def covers? a, b #if x = a and y = b then the ship covers that spot
+		x = @x
+		y = @y
+		length.times do
+		if x == a && y == b
+			return true
+			end
+		end
 	end
+
 end
