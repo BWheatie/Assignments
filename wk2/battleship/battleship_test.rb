@@ -3,13 +3,7 @@ require 'minitest/pride'
 
 
 #Note: This line is going to fail first.
-require './battleship.rb'
-require_relative 'player.rb'
-require_relative 'ships.rb'
-require_relative 'game.rb'
-require_relative 'human.rb'
-require_relative 'computer.rb'
-require_relative 'grid.rb'
+require_relative "battleship.rb"
 
 $mock_inputs = []
 def get_user_input

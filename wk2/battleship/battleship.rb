@@ -1,0 +1,5 @@
+require_relative 'ships.rb'
+require_relative 'player.rb'
+require_relative 'grid.rb'
+require_relative 'human_player.rb'
+require_relative 'computer_player.rb'

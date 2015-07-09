@@ -1,28 +1,44 @@
+require_relative 'hole.rb'
 class Ship
-
+  attr_reader :length, :holes
 	def initialize(length)
 		@length = length
-		
-	end
-
-	def length
-		length = (4)
+   		@holes = []
 	end
 
 	def place x, y, axis
-		@x = x
-		@y = y
-		return true
+    return false unless @holes.empty?
+		@length.times do
+      @holes << Hole.new(x,y)
+      if axis
+        x += 1
+      else
+        y += 1
+      end
+    end
+    true
 	end
 
-	def covers? a, b #if x = a and y = b then the ship covers that spot
-		x = @x
-		y = @y
-		length.times do
-		if x == a && y == b
-			return true
-			end
-		end
+	def covers? a, b
+    @holes.find { |hole| hole.x == a && hole.y == b}
 	end
 
+ 	def overlaps_with? ship
+    @holes.find { |hole| ship.covers? hole.x, hole.y }
+  	end
+
+ 	def fire_at a, b
+    hole = covers? a, b
+    return false unless hole
+    hole.hit!
+  end
+
+  def hit?
+    return true if @holes.find { |hole| hole.x == a && hole.y == b}
+  end
+
+ 	def sunk?
+    hit_holes = @holes.select { |hole| hole.hit? }
+    hit_holes.size == @length
+  	end
 end
