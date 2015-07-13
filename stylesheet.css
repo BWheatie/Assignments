@@ -5,7 +5,7 @@ title {
 body {
 	border: 5pt;
 	text-transform: uppercase;
-	background-image: http://www.wallpaperawesome.com/wallpapers-awesome/wallpapers-strange-funny-weird-crazy-absurd-awesome/wallpaper-strange-funny-weird-crazy-absurd-awesome-718.jpg;
+	background-image: url("http://www.wallpaperawesome.com/wallpapers-awesome/wallpapers-strange-funny-weird-crazy-absurd-awesome/wallpaper-strange-funny-weird-crazy-absurd-awesome-718.jpg");
 }
 
 header {
