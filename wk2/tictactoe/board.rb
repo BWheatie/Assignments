@@ -1,4 +1,5 @@
 class Board
+  attr_reader :game_over?
   def initialize
     @grid = []
     3.times { @grid << [nil, nil, nil] }

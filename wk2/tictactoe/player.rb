@@ -1,6 +1,7 @@
 class Player
 	def initialize
 		@current_player = "X"
+		@get_move = get_move
 	end
 
 	def current_player
@@ -20,6 +21,5 @@ class Player
     	column: input[1].to_i
   		}
 	end
-	puts self.current_player
 
 end
