@@ -1,13 +1,12 @@
 class Board
   def initialize
-    @grid = grid
+    @grid = []
+    3.times { @grid << [nil, nil, nil] }
   end
 
-  def grid 
-    grid = []
-    3.times { grid << [nil, nil, nil]}
+  def to_s
     str = ""
-    grid.each do |row|
+    @grid.each do |row|
       row.each do |space|
         space = "-" unless space
         str += space
@@ -16,6 +15,7 @@ class Board
     end
     str
   end
+end
 
   def move r, c, who
       raise InvalidMoveException unless valid_move? r, c
@@ -38,6 +38,9 @@ class Board
     nil
   end
 
+class InvalidMoveException < Exception
+end
+
   def game_over?
       return true if winner
       return true if full?
@@ -51,5 +54,4 @@ class Board
       end
   end
     true
-  end
 end
