@@ -1,0 +1,32 @@
+title {
+	text-shadow: 5px 5px 10px black;
+}
+
+body {
+	border: 5pt;
+	text-transform: uppercase;
+	background-image: http://www.wallpaperawesome.com/wallpapers-awesome/wallpapers-strange-funny-weird-crazy-absurd-awesome/wallpaper-strange-funny-weird-crazy-absurd-awesome-718.jpg;
+}
+
+header {
+	color: blue;
+}
+
+h1 {
+	text-align: center;
+}
+
+.top_menu {
+	text-decoration: line-through;
+}
+
+.other_list {
+	font: 5pt. arial;
+}
+
+
+
+
+
+
+
