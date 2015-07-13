@@ -5,8 +5,6 @@ RSpec.describe Board do
 		it "has empty grid"
 			expect Board.new
 		end
-	describe ".move"
-		it "can place move" do
 
 
 

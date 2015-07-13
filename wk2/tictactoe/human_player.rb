@@ -1,1 +1,4 @@
-human_player.rb
+class Human_player < Player
+
+	
+end
